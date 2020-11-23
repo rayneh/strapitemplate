@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newsfeeds",
+  "info": {
+    "name": "Newsfeed",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "readers": {
+      "type": "integer"
+    },
+    "newspages": {
+      "via": "newsfeed",
+      "collection": "newspage"
+    }
+  }
+}

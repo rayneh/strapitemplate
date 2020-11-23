@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newspages",
+  "info": {
+    "name": "Newspage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "readers": {
+      "type": "integer"
+    },
+    "isShareable": {
+      "type": "boolean"
+    },
+    "areCommentsAllowed": {
+      "type": "boolean"
+    },
+    "newsfeed": {
+      "model": "newsfeed",
+      "via": "newspages"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
